@@ -1,10 +1,4 @@
-/* =========================================================
-   Portfólio — Gabryel Modesto
-   Tema: azul, grafite e branco | Responsivo
-   Salve este arquivo como: style.css
-   ========================================================= */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 
 :root {
   --bg: #080d18;
@@ -33,9 +27,13 @@ html {
 }
 
 body {
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: "Inter", Arial, sans-serif;
   background:
-    radial-gradient(circle at 15% 0%, rgba(39, 112, 230, 0.16), transparent 32rem),
+    radial-gradient(
+      circle at 15% 0%,
+      rgba(39, 112, 230, 0.16),
+      transparent 32rem
+    ),
     var(--bg);
   color: var(--text);
   line-height: 1.7;
@@ -89,7 +87,7 @@ header h1 {
 }
 
 header h1::after {
-  content: '.';
+  content: ".";
   color: var(--blue-light);
 }
 
@@ -107,7 +105,10 @@ nav a {
   color: var(--muted);
   font-size: 0.88rem;
   font-weight: 600;
-  transition: color 180ms ease, background 180ms ease, transform 180ms ease;
+  transition:
+    color 180ms ease,
+    background 180ms ease,
+    transform 180ms ease;
 }
 
 nav a:hover,
@@ -180,7 +181,9 @@ section > h2::after {
   object-position: center;
   border: 1px solid rgba(113, 180, 255, 0.45);
   border-radius: 26px;
-  box-shadow: 0 0 0 8px rgba(57, 135, 255, 0.06), var(--shadow);
+  box-shadow:
+    0 0 0 8px rgba(57, 135, 255, 0.06),
+    var(--shadow);
 }
 
 /* Tecnologias */
@@ -207,10 +210,17 @@ section > h2::after {
   justify-content: center;
   gap: 12px;
   padding: 20px 12px;
-  background: linear-gradient(145deg, rgba(17, 28, 48, 0.94), rgba(12, 21, 37, 0.94));
+  background: linear-gradient(
+    145deg,
+    rgba(17, 28, 48, 0.94),
+    rgba(12, 21, 37, 0.94)
+  );
   border: 1px solid var(--border);
   border-radius: 15px;
-  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
 }
 
 .technology:hover {
@@ -253,11 +263,17 @@ section > h2::after {
   flex-direction: column;
   align-items: flex-start;
   padding: 26px;
-  background: linear-gradient(145deg, rgba(17, 28, 48, 0.96), rgba(12, 21, 37, 0.96));
+  background: linear-gradient(
+    145deg,
+    rgba(17, 28, 48, 0.96),
+    rgba(12, 21, 37, 0.96)
+  );
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: transform 200ms ease, border-color 200ms ease;
+  transition:
+    transform 200ms ease,
+    border-color 200ms ease;
 }
 
 .myProjects article:hover {
@@ -288,11 +304,13 @@ section > h2::after {
   border-radius: 10px;
   font-size: 0.9rem;
   font-weight: 700;
-  transition: background 180ms ease, transform 180ms ease;
+  transition:
+    background 180ms ease,
+    transform 180ms ease;
 }
 
 .myProjects article a::after {
-  content: '↗';
+  content: "↗";
   font-size: 1rem;
 }
 
@@ -308,7 +326,11 @@ section > h2::after {
 
 .championships > article {
   padding: clamp(22px, 4vw, 38px);
-  background: linear-gradient(145deg, rgba(17, 28, 48, 0.96), rgba(12, 21, 37, 0.96));
+  background: linear-gradient(
+    145deg,
+    rgba(17, 28, 48, 0.96),
+    rgba(12, 21, 37, 0.96)
+  );
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -396,7 +418,9 @@ section > h2::after {
   border: 1px solid rgba(113, 180, 255, 0.55);
   border-radius: 50%;
   cursor: pointer;
-  transition: background 180ms ease, transform 180ms ease;
+  transition:
+    background 180ms ease,
+    transform 180ms ease;
 }
 
 .carousel-button:hover {
@@ -434,7 +458,10 @@ section > h2::after {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
 }
 
 .social-card:hover {
@@ -589,41 +616,109 @@ footer p {
     max-height: 340px;
   }
 
-  
-/* Formação acadêmica */
-.formation {
-  border-top: 1px solid var(--border);
-}
+  /* Formação acadêmica */
+  .formation {
+    border-top: 1px solid var(--border);
+  }
 
-.formation article {
-  margin-bottom: 16px;
-  padding: 24px;
-  background: linear-gradient(
-    145deg,
-    rgba(17, 28, 48, 0.96),
-    rgba(12, 21, 37, 0.96)
-  );
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  transition: transform 200ms ease, border-color 200ms ease;
-}
+  .formation-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
 
-.formation article:hover {
-  transform: translateY(-3px);
-  border-color: rgba(57, 135, 255, 0.55);
-}
+  .formation-card {
+    display: flex;
+    flex-direction: column;
+    padding: 26px;
+    background: linear-gradient(
+      145deg,
+      rgba(17, 28, 48, 0.96),
+      rgba(12, 21, 37, 0.96)
+    );
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition:
+      transform 200ms ease,
+      border-color 200ms ease;
+  }
 
-.formation h3 {
-  margin-bottom: 6px;
-  color: var(--blue-light);
-  font-size: 1.15rem;
-}
+  .formation-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(57, 135, 255, 0.55);
+  }
 
-.formation p {
-  color: var(--muted);
-  font-size: 0.95rem;
-}
+  .formation-icon {
+    margin-bottom: 16px;
+    color: var(--blue-light);
+    font-size: 1.7rem;
+  }
 
+  .formation-level {
+    margin-bottom: 8px;
+    color: var(--blue-light);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .formation-card h3 {
+    margin-bottom: 8px;
+    font-size: 1.15rem;
+    line-height: 1.4;
+  }
+
+  .formation-institution {
+    color: var(--muted);
+  }
+
+  .formation-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 20px;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+
+  .formation-status {
+    padding: 5px 9px;
+    border-radius: 7px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .formation-status.completed {
+    color: #8ce0b1;
+    background: rgba(39, 150, 94, 0.15);
+  }
+
+  .formation-status.in-progress {
+    color: var(--blue-light);
+    background: rgba(57, 135, 255, 0.14);
+  }
+
+  /* Ajuste para telas menores */
+  @media (max-width: 768px) {
+    .formation-container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .formation-container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .formation p {
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
 
   .technologies {
     grid-template-columns: repeat(2, minmax(0, 1fr));
