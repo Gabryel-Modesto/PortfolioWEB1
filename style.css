@@ -589,6 +589,42 @@ footer p {
     max-height: 340px;
   }
 
+  
+/* Formação acadêmica */
+.formation {
+  border-top: 1px solid var(--border);
+}
+
+.formation article {
+  margin-bottom: 16px;
+  padding: 24px;
+  background: linear-gradient(
+    145deg,
+    rgba(17, 28, 48, 0.96),
+    rgba(12, 21, 37, 0.96)
+  );
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: transform 200ms ease, border-color 200ms ease;
+}
+
+.formation article:hover {
+  transform: translateY(-3px);
+  border-color: rgba(57, 135, 255, 0.55);
+}
+
+.formation h3 {
+  margin-bottom: 6px;
+  color: var(--blue-light);
+  font-size: 1.15rem;
+}
+
+.formation p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+
   .technologies {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
